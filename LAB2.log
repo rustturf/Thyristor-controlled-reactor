@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.13)  26 JAN 2026 18:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.13)  26 JAN 2026 20:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -651,25 +651,63 @@ File: Figures/figure2.png Graphic file (type png)
 <use Figures/figure2.png>
 Package pdftex.def Info: Figures/figure2.png  used on input line 170.
 (pdftex.def)             Requested size: 317.07614pt x 303.77441pt.
- [3] [4 <./Figures/figure2.png>] (./LAB2.aux)
+ [3] [4 <./Figures/figure2.png>]
+<Figures/figure3.png, id=36, 838.63312pt x 399.74344pt>
+File: Figures/figure3.png Graphic file (type png)
+<use Figures/figure3.png>
+Package pdftex.def Info: Figures/figure3.png  used on input line 193.
+(pdftex.def)             Requested size: 407.67072pt x 226.4837pt.
+<Figures/figure4.png, id=37, 701.019pt x 375.3222pt>
+File: Figures/figure4.png Graphic file (type png)
+<use Figures/figure4.png>
+Package pdftex.def Info: Figures/figure4.png  used on input line 201.
+(pdftex.def)             Requested size: 452.9679pt x 242.51907pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--205
+
+ []
+
+[5 <./Figures/figure3.png> <./Figures/figure4.png (PNG copy)>]
+<Figures/figure6.png, id=42, 793.0428pt x 484.209pt>
+File: Figures/figure6.png Graphic file (type png)
+<use Figures/figure6.png>
+Package pdftex.def Info: Figures/figure6.png  used on input line 209.
+(pdftex.def)             Requested size: 452.9679pt x 276.57089pt.
+<Figures/figure8.png, id=43, 700.5372pt x 375.3222pt>
+File: Figures/figure8.png Graphic file (type png)
+<use Figures/figure8.png>
+Package pdftex.def Info: Figures/figure8.png  used on input line 216.
+(pdftex.def)             Requested size: 452.9679pt x 242.67943pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--220
+
+ []
+
+[6 <./Figures/figure6.png (PNG copy)> <./Figures/figure8.png (PNG copy)>]
+<Figures/figure10.png, id=47, 794.97pt x 484.209pt>
+File: Figures/figure10.png Graphic file (type png)
+<use Figures/figure10.png>
+Package pdftex.def Info: Figures/figure10.png  used on input line 224.
+(pdftex.def)             Requested size: 452.9679pt x 275.90594pt.
+ [7 <./Figures/figure10.png (PNG copy)>] (./LAB2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19927 strings out of 467538
- 400798 string characters out of 5423725
- 783004 words of memory out of 5000000
- 48488 multiletter control sequences out of 15000+600000
+ 19967 strings out of 467538
+ 401792 string characters out of 5423725
+ 783124 words of memory out of 5000000
+ 48528 multiletter control sequences out of 15000+600000
  634528 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,7n,108p,450b,381s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,7n,108p,450b,383s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on LAB2.pdf (4 pages, 587842 bytes).
+Output written on LAB2.pdf (7 pages, 961103 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
