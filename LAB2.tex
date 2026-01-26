@@ -1,0 +1,189 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{rotating}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{textcomp}
+\usepackage{lscape}
+\usepackage{amssymb}
+\usepackage{bigstrut}
+\usepackage{tcolorbox}
+
+\setlength{\parindent}{0pt}
+\renewcommand\thesection{\arabic{section}}
+
+\begin{document}
+
+\begin{center}
+    \includegraphics[width=4cm]{Figures/KhCE.png} \\
+    \vspace{0.5cm}
+    \textbf{(AN UNDERTAKING OF BHAKTAPUR MUNICIPALITY)}\\
+    \vspace{0.5cm}
+    \textbf{\LARGE KHWOPA COLLEGE OF ENGINEERING}\\
+    \textbf{AFFILIATED TO TRIBHUVAN UNIVERSITY}
+\end{center}
+
+\vspace{1.5cm}
+\begin{center}
+    \textbf{\Large A}\\
+    \textbf{\Large Report on}\\
+    \vspace{0.5cm}
+    \textbf{\large LAB 2: THYRISTOR CONTROLLED REACTOR}\\[0.3cm]
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+    \textbf{Submitted By : }
+\end{center}
+
+\begin{center}
+    Shubhanga Aryal \qquad KCE078BEL038
+\end{center}
+
+\vspace*{1cm}
+\begin{center}
+    \textbf{Submitted To: }\\[0.2cm]
+    \textbf{Er. Sabin Kasula}\\[0.2cm]
+    \textbf{Lecturer, KhCE}
+\end{center}
+
+\vspace{0.3cm}
+\begin{center}
+\textbf{\Large Department of Electrical Engineering}\\
+\vspace{0.3cm}
+\textbf{KHWOPA COLLEGE OF ENGINEERING}\\
+\vspace{0.3cm}
+\textbf{Libali-08, Bhaktapur}
+\end{center}
+
+\thispagestyle{empty}
+\newpage
+
+\onehalfspacing
+
+\begin{center}
+    \Large LAB 2\\[0.2cm]
+    \Large THYRISTOR CONTROLLED REACTOR
+\end{center}
+
+\section{Objectives}
+To understand the working of Thyristor Controlled Reactor and simulate it using Matlab/Simulink for various firing angles.
+
+\section{Software Used}
+\begin{itemize}
+    \item Matlab/Simulink
+\end{itemize}
+
+\section{Theory}
+A Thyristor Controlled Reactor (TCR) is a reactance connected in series with a bidirectional thyristor valve.
+The thyristor valve is phase controlled, which allows the value of delivered reactive power to be varied to meet different system conditions.
+TCRs are used in transmission lines for limiting voltages on lightly loaded transmission lines.\\[0.2cm]
+
+The circuit diagram of a thyristor controlled reactor is as shown below:
+
+\begin{figure}[!hb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/figure1.png}
+    \caption{Circuit Diagram of Thyristor Controlled Reactor}
+    \label{fig:TCR}
+\end{figure}
+
+\subsection*{Operating Principle of TCR}
+A TCR scheme has a fixed inductor $L$ in series with an AC voltage controller consisting of thyristors $T_1$ and $T_2$ as shown in the figure above.
+The thyristor $T_1$ conducts for the positive half cycle of the reactor current and thyristor $T_2$ conducts for the negative half cycle of the reactor current.\\[0.2cm]
+
+The basic idea is to change the RMS value of the reactor current $I_L$ by controlling the firing angle $\alpha$.
+The magnitude of the reactor current changes with constant system voltage $V_s$ and the inductor in series with the voltage controller is equivalent to $X_L(\alpha)$ as a function of firing angle.\\[0.2cm]
+
+Applying KVL to the circuit, we have:
+
+\begin{equation}
+    V_s = L\dfrac{di_L}{dt} + R i_L
+\end{equation}
+
+The solution of the above differential equation is given by a steady and transient part as:
+
+\begin{equation}
+i_L = \dfrac{V_m}{Z}\sin(\omega t - \phi) + A e^{-\frac{R}{L}t}
+\end{equation}
+
+where 
+\[
+Z = \sqrt{R^2 + (\omega L)^2}
+\]
+and
+\[
+\phi = \tan^{-1}\!\left(\dfrac{\omega L}{R}\right)
+\]
+
+Solving the above equations with given initial conditions and simplifying, we get:
+
+\begin{equation}
+i_L(t) =
+\dfrac{V_m}{Z}
+\left[
+\sin(\omega t - \phi)
+-
+\sin(\alpha - \phi)
+e^{-\frac{R}{L}\left(t-\frac{\alpha}{\omega}\right)}
+\right]
+\end{equation}
+If $\alpha=\phi$, the current becomes continuous and sinusoidal.\\[0.2cm]
+Since $X_L>>>>R$ the above equation becomes:
+\begin{equation}
+i_L(t) = \dfrac{V_m}{Z}sin(\omega t - \frac{\pi}{2})-\dfrac{V_m}{Z}sin(\alpha - \frac{\pi}{2})
+\end{equation}
+When alpha is equal to 90 degrees, the second part of the current becomes zero .
+This means that the reactor current lags the source voltage by 90 degrees. Hence alpha=90 degree is taken as the 
+firing angle $\delta=0$ to analyze the circuit. 
+
+\[
+\text{When } \alpha = \frac{\pi}{2} + \delta \quad (\text{i.e., firing angle } = \delta)
+\]
+
+\[
+i_L = \frac{V_m}{Z} \sin\left(\alpha t - \frac{\pi}{2}\right)
+      - \frac{V_m}{Z} \sin \delta
+\]
+
+From point \(a\) to \(b\) in Figure 2,
+
+\[
+\frac{V_m}{Z} \sin\left(\alpha t - \frac{\pi}{2}\right)
+<
+\frac{V_m}{Z} \sin \delta
+\]
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figures/figure2.png}
+    \caption{Waveform of TCR for Firing Angle $\delta$}
+    \label{fig:TCR_waveform} 
+\end{figure}
+Therefore, from point a to b net current iL is negative, hence T1
+does not conduct from a to b. Therefore, the current waveform is not sindusodial.\\[0.2cm]
+Upon fourier analysis and simplyfying the fundamental component of inductor current is:
+\begin{equation}
+    I_l=\dfrac{V_m}{X_L}(1- \dfrac{2\delta}{\pi}-\dfrac{sin2\delta}{\pi}).
+\end{equation}
+The above equation can be written as : 
+\begin{equation}
+    I_L=B(\delta)V_m
+\end{equation}
+where $B(\delta)=1/X=\dfrac{1}{\omega L}(1- \dfrac{2\delta}{\pi}-\dfrac{sin2\delta}{\pi})$.
+and $X_L=\omega L(\dfrac{\pi}{\pi-2\delta+sin2\delta})$.\\[0.2cm]
+From the above equation it is clear that the inductive reactance $X_L$ is a function of firing angle $\delta$.\\[0.2cm]
+Since, inductor draws non sinusodial current, it causes harmonics in the system.
+
+\end{document}
